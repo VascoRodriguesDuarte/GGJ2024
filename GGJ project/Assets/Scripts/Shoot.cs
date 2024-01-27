@@ -26,7 +26,7 @@ public class Shoot : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        playerInputs= new PlayerInputs();
+        playerInputs = new PlayerInputs();
         rb = gameObject.GetComponent<Rigidbody2D>();
         chargePower = minChargePower;
     }

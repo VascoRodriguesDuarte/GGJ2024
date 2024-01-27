@@ -18,9 +18,14 @@ public class SceneController : MonoBehaviour
     [SerializeField] private UnityEvent unpauseEvent;
     private bool ispaused = false;
 
+    private void Awake()
+    {
+        playerInputs = new PlayerInputs();
+    }
+
     private void OnEnable()
     {
-        pause = player.shoot.playerInputs.Player.Pause;
+        pause = playerInputs.Player.Pause;
         pause.Enable();
     }
     private void Start()
@@ -34,11 +39,7 @@ public class SceneController : MonoBehaviour
     private void Update()
     {
         if (pause.WasPerformedThisFrame())
-        {
-
             PauseGame();
-        }
-
     }
 
     public void GoToScene(int sceneID)
@@ -65,12 +66,19 @@ public class SceneController : MonoBehaviour
             player.PausePlayer();
             pauseEvent.Invoke();
             ispaused = true;
+            Time.timeScale = 0;
         }
         else
         {
             player.UnpausePlayer();
             unpauseEvent.Invoke();
             ispaused = false;
+            Time.timeScale = 1;
         }
+    }
+
+    private void OnDisable()
+    {
+        pause.Disable();
     }
 }
