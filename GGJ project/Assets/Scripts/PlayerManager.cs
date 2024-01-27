@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private SpriteRenderer defaultSprite;
     [SerializeField] private SpriteRenderer shotgunSprite;
+    [SerializeField] private GameObject loadCharge;
     private SceneController sceneCont;
     // [SerializeField] private SpriteRenderer ragdollSprite;
 
@@ -35,6 +36,7 @@ public class PlayerManager : MonoBehaviour
         lookAtMouse.PublicDeactivate();
         defaultSprite.enabled = false;
         shotgunSprite.enabled = false;
+        loadCharge.SetActive(false);
         //ragdollSprite.enabled = true;
     }
 
@@ -61,6 +63,7 @@ public class PlayerManager : MonoBehaviour
         lookAtMouse.PublicActivate();
         defaultSprite.enabled = true;
         shotgunSprite.enabled = true;
+        loadCharge.SetActive(true);
         //ragdollSprite.enabled = false;
     }
 
