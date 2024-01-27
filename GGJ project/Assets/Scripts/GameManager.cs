@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private static GameManager GMInstance;
     public int deathCount = 0;
     public TextMeshProUGUI deathCountTxt;
+    public int checkPoint = 0;
     private void Awake()
     {
         DontDestroyOnLoad(this);
@@ -32,10 +33,24 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        deathCountTxt.text = "Deaths: " + deathCount.ToString();
+        if(deathCountTxt != null)
+            deathCountTxt.text = "Deaths: " + deathCount.ToString();
     }
     public void AddDeath()
     {
         deathCount++;
+    }
+
+    public void SaveGame()
+    {
+        SaveSystem.SavePlayer(GMInstance);
+    }
+
+    public void LoadGame()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        deathCount = data.deaths;
+        checkPoint = data.lastCheckPoint;
     }
 }

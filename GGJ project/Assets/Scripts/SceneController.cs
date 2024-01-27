@@ -17,6 +17,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private UnityEvent pauseEvent;
     [SerializeField] private UnityEvent unpauseEvent;
     private bool ispaused = false;
+    private bool isMainMenu = true;
 
     private void Awake()
     {
@@ -38,24 +39,63 @@ public class SceneController : MonoBehaviour
 
     private void Update()
     {
+        if(isMainMenu)
+            return;
+
         if (pause.WasPerformedThisFrame())
             PauseGame();
     }
 
     public void GoToScene(int sceneID)
     {
+        if(sceneID == 0)
+        {
+            isMainMenu = true;
+            if(gm != null)
+                gm.SaveGame();
+        }
+        else
+        {
+            isMainMenu = false;
+
+        }
+        SceneManager.LoadScene(sceneID);
+
+    }
+
+
+    public void LoadGame(int sceneID)
+    {
+        if(gm != null)
+            gm.LoadGame();
         SceneManager.LoadScene(sceneID);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+
     public void RestartScene()
     {
-        gm.AddDeath();
+        gm.SaveGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
     }
 
+    public void ResetStats()
+    {
+        if (gm == null)
+            return;
+
+        gm.deathCount = 0;
+        gm.SaveGame();
+    }
+
     public void DeathMenu()
     {
+        gm.AddDeath();
         deathEvents.Invoke();
     }
 
