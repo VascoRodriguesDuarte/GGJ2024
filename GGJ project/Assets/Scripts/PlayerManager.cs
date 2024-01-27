@@ -5,12 +5,18 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private Shoot shoot;
+    [SerializeField] public Shoot shoot;
     [SerializeField] private LookAtMouse lookAtMouse;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private SpriteRenderer defaultSprite;
     [SerializeField] private SpriteRenderer shotgunSprite;
+    private SceneController sceneCont;
     // [SerializeField] private SpriteRenderer ragdollSprite;
+
+    private void Start()
+    {
+        sceneCont = Object.FindObjectOfType<SceneController>();
+    }
 
     public void PublicDeathPing()
     {
@@ -32,6 +38,21 @@ public class PlayerManager : MonoBehaviour
         //ragdollSprite.enabled = true;
     }
 
+
+    public void PausePlayer()
+    {
+        playerMovement.PublicDeactivate();
+        shoot.PublicDeactivate();
+        lookAtMouse.PublicDeactivate();
+    }
+
+    public void UnpausePlayer()
+    {
+        playerMovement.PublicActivate();
+        shoot.PublicActivate();
+        lookAtMouse.PublicActivate();
+    }
+
     private void ActivatePlayer()
     {
         this.transform.position = spawnPoint.position;
@@ -41,5 +62,15 @@ public class PlayerManager : MonoBehaviour
         defaultSprite.enabled = true;
         shotgunSprite.enabled = true;
         //ragdollSprite.enabled = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Hurt"))
+        {
+            sceneCont.DeathMenu();
+            DeactivatePlayer();
+
+        }
     }
 }

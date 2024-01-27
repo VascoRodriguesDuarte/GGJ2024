@@ -15,7 +15,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private Image reloadUI;
 
     private InputAction shoot;
-    private PlayerInputs playerInputs;
+    public PlayerInputs playerInputs;
     private Rigidbody2D rb;
     private float chargePower;
     private float cooldown;
