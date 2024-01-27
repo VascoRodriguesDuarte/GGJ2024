@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class LookAtMouse : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer shotgunRenderer;
+    [SerializeField] private SpriteRenderer grandmaRenderer;
     private bool activationState = true;
 
     private void Update()
@@ -15,6 +17,17 @@ public class LookAtMouse : MonoBehaviour
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             
             Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+
+            if(direction.x >= 0  && shotgunRenderer.flipX == true)
+            {
+                shotgunRenderer.flipX = false;
+                grandmaRenderer.flipX = false;
+            }
+            if(direction.x <= 0 && shotgunRenderer.flipX == false)
+            {
+                shotgunRenderer.flipX = true;
+                grandmaRenderer.flipX = true;
+            }
 
             transform.up = direction;
         }
