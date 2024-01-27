@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private InputAction movement;
     private PlayerInputs playerInputs;
+    private bool activationState = true;
 
     // Start is called before the first frame update
     private void Awake()
@@ -32,9 +33,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        //Debug.Log(rb.velocity.x);
-
-        if(IsGrounded())
+        if(IsGrounded() && activationState)
         {
             // rb.velocity = new Vector2(movement.ReadValue<float>() * speed, rb.velocity.y);
             float input = movement.ReadValue<float>();
@@ -56,5 +55,15 @@ public class PlayerMovement : MonoBehaviour
     private void OnDisable()
     {
         movement.Disable();
+    }
+
+    public void PublicActivate()
+    {
+        activationState = true;
+    }
+
+    public void PublicDeactivate()
+    {
+        activationState = false;
     }
 }
