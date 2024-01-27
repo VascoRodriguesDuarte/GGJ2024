@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Shoot : MonoBehaviour
     [SerializeField] private float cooldownMax = 3;
     [SerializeField] private AudioSource shotgunShoot;
     [SerializeField] private AudioSource shotgunReload;
+    [SerializeField] private Image chargeUI;
+    [SerializeField] private Image reloadUI;
 
     private InputAction shoot;
     private PlayerInputs playerInputs;
@@ -35,6 +38,9 @@ public class Shoot : MonoBehaviour
 
     private void Update()
     {
+
+        chargeUI.fillAmount = (chargePower-minChargePower) / (maxChargePower-minChargePower);
+        reloadUI.fillAmount = cooldown;
         if(activationState)
         {
             if (shoot.IsPressed() && cooldown == 0f)
