@@ -11,6 +11,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private float cooldownMax = 3;
     [SerializeField] private AudioSource shotgunShoot;
     [SerializeField] private AudioSource shotgunReload;
+    [SerializeField] private AudioSource[] screams;
     [SerializeField] private Image chargeUI;
     [SerializeField] private Image reloadUI;
 
@@ -52,6 +53,12 @@ public class Shoot : MonoBehaviour
             else if(shoot.WasReleasedThisFrame() && charging)
             {
                 shotgunShoot.Play();
+
+                if(chargePower >= minChargePower+((maxChargePower - minChargePower)/1.5))
+                {
+                    DelayedScream();
+                    Debug.Log("Scream maybe...");
+                }
                 
                 Vector3 mousePosition = Mouse.current.position.ReadValue();
                 mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -71,7 +78,7 @@ public class Shoot : MonoBehaviour
             if(cooldown != 0f)
             {
                 cooldown -= Time.deltaTime;
-                cooldown = Mathf.Clamp(cooldown, 0f, maxChargePower);
+                cooldown = Mathf.Clamp(cooldown, 0f, cooldownMax);
 
                 if(cooldown == 0f)
                 {
@@ -94,5 +101,34 @@ public class Shoot : MonoBehaviour
     public void PublicDeactivate()
     {
         activationState = false;
+    }
+
+    // private IEnumerator DelayedScream()
+    // {
+    //     yield return new WaitForSeconds(.05f);
+    //     int random = Random.Range(0, 3);
+
+    //     if(random == 1)
+    //     {
+    //         int randomSound = Random.Range(1, 4);
+            
+    //         Debug.Log("SCREAM!");
+    //         screams[randomSound - 1].Play();
+    //     }
+
+    //     Debug.Log("End Scream");
+    // }
+
+    private void DelayedScream()
+    {
+        int random = Random.Range(0, 3);
+
+        if(random == 1)
+        {
+            int randomSound = Random.Range(1, 4);
+            
+            Debug.Log(randomSound - 1);
+            screams[randomSound - 1].Play();
+        }
     }
 }
