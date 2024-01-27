@@ -4,10 +4,12 @@ using System.Collections;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] float minChargePower = 50;
-    [SerializeField] float maxChargePower = 250;
-    [SerializeField] float potency = 50;
-    [SerializeField] float cooldownMax = 3;
+    [SerializeField] private float minChargePower = 50;
+    [SerializeField] private float maxChargePower = 250;
+    [SerializeField] private float potency = 50;
+    [SerializeField] private float cooldownMax = 3;
+    [SerializeField] private AudioSource shotgunShoot;
+    [SerializeField] private AudioSource shotgunReload;
 
     private InputAction shoot;
     private PlayerInputs playerInputs;
@@ -43,6 +45,8 @@ public class Shoot : MonoBehaviour
             }
             else if(shoot.WasReleasedThisFrame() && charging)
             {
+                shotgunShoot.Play();
+                
                 Vector3 mousePosition = Mouse.current.position.ReadValue();
                 mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
                 
@@ -62,7 +66,11 @@ public class Shoot : MonoBehaviour
             {
                 cooldown -= Time.deltaTime;
                 cooldown = Mathf.Clamp(cooldown, 0f, maxChargePower);
-                Debug.Log(cooldown);
+
+                if(cooldown == 0f)
+                {
+                    shotgunReload.Play();
+                }
             }
         }
     }
