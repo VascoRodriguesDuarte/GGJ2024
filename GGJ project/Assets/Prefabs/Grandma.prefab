@@ -404,6 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eb68f71b2280a42b1670112360561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotgunRenderer: {fileID: 4358615874669875551}
+  grandmaRenderer: {fileID: 35736813497150961}
 --- !u!1 &7245834842657201355
 GameObject:
   m_ObjectHideFlags: 0
