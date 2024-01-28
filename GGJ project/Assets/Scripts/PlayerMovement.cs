@@ -12,10 +12,13 @@ public class PlayerMovement : MonoBehaviour
     private InputAction movement;
     private PlayerInputs playerInputs;
     private bool activationState = true;
+    private Animator anim;
+    public bool lookingRigth = true;
 
     // Start is called before the first frame update
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         playerInputs= new PlayerInputs();
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -33,23 +36,38 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if(IsGrounded() && activationState)
+        
+
+        if (IsGrounded() && activationState)
         {
             // rb.velocity = new Vector2(movement.ReadValue<float>() * speed, rb.velocity.y);
             float input = movement.ReadValue<float>();
             Vector2 vel = rb.velocity;
-
+            
             if (input > 0.01 && vel.x < speed && Mathf.Sign(vel.x) == 1)
             {
                 vel.x = speed;
-            } 
-            else if(input < -0.01 && Mathf.Abs(vel.x) < speed && (Mathf.Sign(vel.x) == -1 || vel.x == 0))
+            }
+            else if (input < -0.01 && Mathf.Abs(vel.x) < speed && (Mathf.Sign(vel.x) == -1 || vel.x == 0))
             {
                 vel.x = -speed;
             }
 
             rb.velocity = vel;
         }
+        anim.SetBool("rigth", lookingRigth);
+
+        if (movement.ReadValue<float>() == 0.0f)
+        {
+            anim.SetBool("walk", false);          
+        }
+        else
+        {
+            anim.SetBool("walk", true);
+        }
+
+        
+
     }
 
     private void OnDisable()

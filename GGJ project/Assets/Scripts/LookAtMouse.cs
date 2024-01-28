@@ -11,6 +11,8 @@ public class LookAtMouse : MonoBehaviour
     [SerializeField] private SpriteRenderer grandmaGatorRenderer;
     [SerializeField] private SpriteRenderer grandmaLeg1Renderer;
     [SerializeField] private SpriteRenderer grandmaLeg2Renderer;
+    [SerializeField] private PlayerMovement playerMov;
+
     private bool activationState = true;
 
     private void Update()
@@ -24,6 +26,7 @@ public class LookAtMouse : MonoBehaviour
 
             if(direction.x >= 0  && shotgunRenderer.flipX == true)
             {
+                playerMov.lookingRigth = true;
                 shotgunRenderer.flipX = false;
                 grandmaTorsoRenderer.flipX = false;
                 grandmaHeadRenderer.flipX = false;
@@ -33,6 +36,7 @@ public class LookAtMouse : MonoBehaviour
             }
             if(direction.x <= 0 && shotgunRenderer.flipX == false)
             {
+                playerMov.lookingRigth = false;
                 shotgunRenderer.flipX = true;
                 grandmaTorsoRenderer.flipX = true;
                 grandmaHeadRenderer.flipX = true;

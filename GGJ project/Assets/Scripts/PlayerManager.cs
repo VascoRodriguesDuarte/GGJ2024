@@ -12,12 +12,15 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private SpriteRenderer shotgunSprite;
     [SerializeField] private GameObject loadCharge;
     private SceneController sceneCont;
+    [SerializeField] private GameObject gator;
     // [SerializeField] private SpriteRenderer ragdollSprite;
 
     private void Start()
     {
+        gator.SetActive(false);
         sceneCont = Object.FindObjectOfType<SceneController>();
     }
+
 
     public void PublicDeathPing()
     {
@@ -74,6 +77,11 @@ public class PlayerManager : MonoBehaviour
             sceneCont.DeathMenu();
             DeactivatePlayer();
 
+        }
+
+        if (collision.CompareTag("Gator"))
+        {
+            gator.SetActive(true);
         }
     }
 }

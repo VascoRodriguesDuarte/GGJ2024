@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hurt
+  - Gator
   layers:
   - Default
   - TransparentFX
