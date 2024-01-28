@@ -5,22 +5,19 @@ using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] private float minChargePower = 50;
-    [SerializeField] private float maxChargePower = 250;
-    [SerializeField] private float potency = 50;
+    [SerializeField] private float shootPower = 50;
     [SerializeField] private float cooldownMax = 3;
     [SerializeField] private AudioSource shotgunShoot;
     [SerializeField] private AudioSource shotgunReload;
     [SerializeField] private AudioSource[] screams;
     [SerializeField] private Image chargeUI;
-    [SerializeField] private Image reloadUI;
+    [SerializeField] private float maxShells;
 
     private InputAction shoot;
+    private float shells;
     public PlayerInputs playerInputs;
     private Rigidbody2D rb;
-    private float chargePower;
     private float cooldown;
-    private bool charging = false;
     private bool activationState = true;
 
     // Start is called before the first frame update
@@ -28,7 +25,7 @@ public class Shoot : MonoBehaviour
     {
         playerInputs = new PlayerInputs();
         rb = gameObject.GetComponent<Rigidbody2D>();
-        chargePower = minChargePower;
+        shells = maxShells;
     }
 
     private void OnEnable()
@@ -40,25 +37,18 @@ public class Shoot : MonoBehaviour
     private void Update()
     {
 
-        chargeUI.fillAmount = (chargePower-minChargePower) / (maxChargePower-minChargePower);
-        reloadUI.fillAmount = cooldown;
+        chargeUI.fillAmount = shells / maxShells;
         if(activationState)
         {
-            if (shoot.IsPressed() && cooldown == 0f)
-            {
-                chargePower += Time.deltaTime * potency;
-                chargePower = Mathf.Clamp(chargePower, minChargePower, maxChargePower);
-                charging = true;
-            }
-            else if(shoot.WasReleasedThisFrame() && charging)
+            if(shoot.WasPressedThisFrame() && shells > 0f)
             {
                 shotgunShoot.Play();
 
-                if(chargePower >= minChargePower+((maxChargePower - minChargePower)/1.5))
-                {
-                    DelayedScream();
-                    Debug.Log("Scream maybe...");
-                }
+                // if(chargePower >= minChargePower+((maxChargePower - minChargePower)/1.5))
+                // {
+                //     DelayedScream();
+                //     Debug.Log("Scream maybe...");
+                // }
                 
                 Vector3 mousePosition = Mouse.current.position.ReadValue();
                 mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -66,13 +56,12 @@ public class Shoot : MonoBehaviour
                 Vector2 direction = new Vector2(transform.position.x - mousePosition.x , transform.position.y - mousePosition.y);
                 Vector2 normalizedDirection = direction.normalized;
 
-                rb.AddForce(normalizedDirection * chargePower);
+                rb.velocity = new Vector2(0f,0f);
+                rb.AddForce(normalizedDirection * shootPower);
 
-                chargePower = minChargePower;
+                shells -= 1f;
 
                 cooldown = cooldownMax;
-
-                charging = false;
             }
 
             if(cooldown != 0f)
@@ -83,6 +72,7 @@ public class Shoot : MonoBehaviour
                 if(cooldown == 0f)
                 {
                     shotgunReload.Play();
+                    shells = maxShells;
                 }
             }
         }

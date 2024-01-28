@@ -997,6 +997,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 436972818910415788, guid: 60a3b4837628900419f0e422f10bb873, type: 3}
+      propertyPath: maxShells
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 436972818910415788, guid: 60a3b4837628900419f0e422f10bb873, type: 3}
+      propertyPath: shootPower
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 436972818910415788, guid: 60a3b4837628900419f0e422f10bb873, type: 3}
+      propertyPath: cooldownMax
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1780385829974375026, guid: 60a3b4837628900419f0e422f10bb873, type: 3}
       propertyPath: spawnPoint
       value: 

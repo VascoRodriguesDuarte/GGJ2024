@@ -45,7 +45,10 @@ public class LookAtMouse : MonoBehaviour
                 grandmaLeg2Renderer.flipX = true;
             }
 
-            transform.up = direction;
+            if(Mathf.Abs(direction.x) > 0.1f && Mathf.Abs(direction.y) > 0.1f)
+            {
+                transform.up = direction;
+            }
         }
     }
 
