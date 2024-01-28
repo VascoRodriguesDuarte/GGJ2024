@@ -222,6 +222,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   defaultSprite: {fileID: 35736813497150961}
   shotgunSprite: {fileID: 4358615874669875551}
+  loadCharge: {fileID: 561862669127631312}
 --- !u!114 &5294085427816278814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: c6a6b8cd985fdd94f9d88985525a77dc, type: 3}
   m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -332,7 +333,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 3
-  m_LinearDrag: 1
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: 2d38dd7f57514084a8e7964c3ba680bf, type: 2}
@@ -1308,7 +1309,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotgunRenderer: {fileID: 4358615874669875551}
-  grandmaRenderer: {fileID: 35736813497150961}
+  grandmaTorsoRenderer: {fileID: 0}
+  grandmaHeadRenderer: {fileID: 0}
+  grandmaGatorRenderer: {fileID: 0}
+  grandmaLeg1Renderer: {fileID: 0}
+  grandmaLeg2Renderer: {fileID: 0}
 --- !u!1 &7408251170009119498
 GameObject:
   m_ObjectHideFlags: 0
