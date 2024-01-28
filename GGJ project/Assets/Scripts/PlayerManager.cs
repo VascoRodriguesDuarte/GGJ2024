@@ -8,11 +8,15 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public Shoot shoot;
     [SerializeField] private LookAtMouse lookAtMouse;
     [SerializeField] private Transform spawnPoint;
-    [SerializeField] private SpriteRenderer defaultSprite;
+    [SerializeField] private SpriteRenderer defaultTorsoSprite;
+    [SerializeField] private SpriteRenderer defaultHeadSprite;
+    [SerializeField] private SpriteRenderer defaultLeg1Sprite;
+    [SerializeField] private SpriteRenderer defaultLeg2Sprite;
+    [SerializeField] private SpriteRenderer defaultGatorSprite;
     [SerializeField] private SpriteRenderer shotgunSprite;
-    [SerializeField] private GameObject loadCharge;
     private SceneController sceneCont;
     [SerializeField] private GameObject gator;
+    [SerializeField] private GameObject ragdoll;
     // [SerializeField] private SpriteRenderer ragdollSprite;
 
     private void Start()
@@ -37,10 +41,13 @@ public class PlayerManager : MonoBehaviour
         playerMovement.PublicDeactivate();
         shoot.PublicDeactivate();
         lookAtMouse.PublicDeactivate();
-        defaultSprite.enabled = false;
+        defaultTorsoSprite.enabled = false;
+        defaultHeadSprite.enabled = false;
+        defaultLeg1Sprite.enabled = false;
+        defaultLeg2Sprite.enabled = false;
+        defaultGatorSprite.enabled = false;
         shotgunSprite.enabled = false;
-        loadCharge.SetActive(false);
-        //ragdollSprite.enabled = true;
+        ragdoll.SetActive(true);
     }
 
 
@@ -64,10 +71,9 @@ public class PlayerManager : MonoBehaviour
         playerMovement.PublicActivate();
         shoot.PublicActivate();
         lookAtMouse.PublicActivate();
-        defaultSprite.enabled = true;
+        defaultTorsoSprite.enabled = true;
         shotgunSprite.enabled = true;
-        loadCharge.SetActive(true);
-        //ragdollSprite.enabled = false;
+        ragdoll.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
