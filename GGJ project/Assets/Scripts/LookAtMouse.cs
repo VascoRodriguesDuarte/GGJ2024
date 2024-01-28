@@ -12,6 +12,8 @@ public class LookAtMouse : MonoBehaviour
     [SerializeField] private SpriteRenderer grandmaLeg1Renderer;
     [SerializeField] private SpriteRenderer grandmaLeg2Renderer;
     [SerializeField] private PlayerMovement playerMov;
+    [SerializeField] private GameObject muzzleR;
+    [SerializeField] private GameObject muzzleL;
 
     private bool activationState = true;
 
@@ -33,6 +35,8 @@ public class LookAtMouse : MonoBehaviour
                 grandmaGatorRenderer.flipX = false;
                 grandmaLeg1Renderer.flipX = false;
                 grandmaLeg2Renderer.flipX = false;
+                muzzleL.SetActive(false);
+                muzzleR.SetActive(true);
             }
             if(direction.x <= 0 && shotgunRenderer.flipX == false)
             {
@@ -43,6 +47,8 @@ public class LookAtMouse : MonoBehaviour
                 grandmaGatorRenderer.flipX = true;
                 grandmaLeg1Renderer.flipX = true;
                 grandmaLeg2Renderer.flipX = true;
+                muzzleR.SetActive(false);
+                muzzleL.SetActive(true);
             }
 
             if(Mathf.Abs(direction.x) > 0.1f && Mathf.Abs(direction.y) > 0.1f)

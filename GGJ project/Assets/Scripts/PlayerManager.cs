@@ -16,7 +16,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private SpriteRenderer shotgunSprite;
     private SceneController sceneCont;
     [SerializeField] private GameObject gator;
+    private bool hasGator = false;
     [SerializeField] private GameObject ragdoll;
+    [SerializeField] private ParticleSystem gatorPuff;
     // [SerializeField] private SpriteRenderer ragdollSprite;
 
     private void Start()
@@ -87,7 +89,13 @@ public class PlayerManager : MonoBehaviour
 
         if (collision.CompareTag("Gator"))
         {
-            gator.SetActive(true);
+            if (!hasGator)
+            {
+                hasGator = true;
+                gatorPuff.Play();
+                gator.SetActive(true);
+            }
+            
         }
     }
 }

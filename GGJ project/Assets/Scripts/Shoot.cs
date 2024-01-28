@@ -19,6 +19,10 @@ public class Shoot : MonoBehaviour
     private Rigidbody2D rb;
     private float cooldown;
     private bool activationState = true;
+    public ParticleSystem shootParticle1;
+    public ParticleSystem shootParticle2;
+    public ParticleSystem shootParticle3;
+    public ParticleSystem shootParticle4;
 
     // Start is called before the first frame update
     private void Awake()
@@ -58,6 +62,11 @@ public class Shoot : MonoBehaviour
 
                 rb.velocity = new Vector2(0f,0f);
                 rb.AddForce(normalizedDirection * shootPower);
+
+                shootParticle1.Play();
+                shootParticle2.Play();
+                shootParticle3.Play();
+                shootParticle4.Play();
 
                 shells -= 1f;
 
