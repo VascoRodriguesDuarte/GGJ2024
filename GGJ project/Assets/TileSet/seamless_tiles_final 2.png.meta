@@ -1,0 +1,844 @@
+fileFormatVersion: 2
+guid: 2685230d8eb51634aa80fadf29fc525e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 280
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849145627c5eece4aa8545baac972446
+      internalID: -1470314305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_1
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 840
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62383270fcfedbf43910f9d7c3bb29de
+      internalID: 1901122970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_2
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 840
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5936d26553a01b744a3dcec628832d2c
+      internalID: -153920206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_3
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 840
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49daee4bdc421f347a91e2ee647d635f
+      internalID: -157281492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_4
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 840
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6703cdc914e864198d3e42187362b5
+      internalID: -299079700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_5
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 840
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b17c49432d40164681062f5b02b292d
+      internalID: -143215566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_6
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 840
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f69099e824a8e244ab583eed3c09dad
+      internalID: 1533352187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_7
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 840
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a54d48dcc91503418bb96221c60bdfd
+      internalID: -254154062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3bad51d80c24e48b6e9f0634bb3952
+      internalID: -982837134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_9
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 560
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1223b07b2939c43ac6a38f47acc0ca
+      internalID: -474126035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_10
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 560
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cefc4962f1fda54cb5943cfd6e4a030
+      internalID: -1147957293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_11
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 560
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba73360452ca4ec45b5d0fb4a6608964
+      internalID: 148511009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_12
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 560
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2ac214fe28fac4294de37748757df0
+      internalID: -1396925211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_13
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 560
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d8b193d75d6ab45abc472d83577318
+      internalID: 1405532715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_14
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 560
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32e8ee6841b46f478e525314f6cd96f
+      internalID: -88682714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_15
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 560
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338804adc1651e94aa0bdbf357abc407
+      internalID: 1379258260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0044978102d14314b8460f903b6d75ed
+      internalID: 1768876572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_17
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 280
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43acd0a4c1942eb4eb202ac2e884fabc
+      internalID: -2138488288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_18
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 280
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2d13d69eb60c24f95ce3987840a7f1
+      internalID: -130209577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_19
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 280
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdf75781403f8643bd916fe2750f68e
+      internalID: -877035737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_20
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 280
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9a68a7e11cd4b4ea433c5b3f1dcfce
+      internalID: 1837690705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_21
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 280
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39ecd07f8e8a184faaccb5489e8805f
+      internalID: 720560479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_22
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 280
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738660d946ff3c142b990feccf4409a7
+      internalID: -1598531487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_23
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 280
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f75f670c69599438ead20e52db62bd
+      internalID: 536413882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013634329b62dae4da61159cb0558e4a
+      internalID: 1965998611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_25
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59767a3dbf90d8a45a08a200f8ca05d8
+      internalID: -1223581804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_26
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 0
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c1a47edbfb1f840948dbf244100a73
+      internalID: 127695516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_27
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 0
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80659734ea5b594395edb0c9e57ba64
+      internalID: -661329296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_28
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 0
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c279517dce0b9f43a7ad87304312092
+      internalID: 1135621198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_29
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 0
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaec0f16ed9b5094a9dc5f52461dee6f
+      internalID: 1508728622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_30
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 0
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e71a600bcb4724d9f716b435db3439
+      internalID: -57851285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seamless_tiles_final 2_31
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 0
+        width: 281
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05834e9b03782f845a113ba1de7d7114
+      internalID: 1576631084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      seamless_tiles_final 2_0: -1470314305
+      seamless_tiles_final 2_1: 1901122970
+      seamless_tiles_final 2_10: -1147957293
+      seamless_tiles_final 2_11: 148511009
+      seamless_tiles_final 2_12: -1396925211
+      seamless_tiles_final 2_13: 1405532715
+      seamless_tiles_final 2_14: -88682714
+      seamless_tiles_final 2_15: 1379258260
+      seamless_tiles_final 2_16: 1768876572
+      seamless_tiles_final 2_17: -2138488288
+      seamless_tiles_final 2_18: -130209577
+      seamless_tiles_final 2_19: -877035737
+      seamless_tiles_final 2_2: -153920206
+      seamless_tiles_final 2_20: 1837690705
+      seamless_tiles_final 2_21: 720560479
+      seamless_tiles_final 2_22: -1598531487
+      seamless_tiles_final 2_23: 536413882
+      seamless_tiles_final 2_24: 1965998611
+      seamless_tiles_final 2_25: -1223581804
+      seamless_tiles_final 2_26: 127695516
+      seamless_tiles_final 2_27: -661329296
+      seamless_tiles_final 2_28: 1135621198
+      seamless_tiles_final 2_29: 1508728622
+      seamless_tiles_final 2_3: -157281492
+      seamless_tiles_final 2_30: -57851285
+      seamless_tiles_final 2_31: 1576631084
+      seamless_tiles_final 2_4: -299079700
+      seamless_tiles_final 2_5: -143215566
+      seamless_tiles_final 2_6: 1533352187
+      seamless_tiles_final 2_7: -254154062
+      seamless_tiles_final 2_8: -982837134
+      seamless_tiles_final 2_9: -474126035
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
