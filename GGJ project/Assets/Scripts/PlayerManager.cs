@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private SpriteRenderer defaultLeg2Sprite;
     [SerializeField] private SpriteRenderer defaultGatorSprite;
     [SerializeField] private SpriteRenderer shotgunSprite;
+    [SerializeField] private GameObject barSprite;
     private SceneController sceneCont;
     [SerializeField] private GameObject gator;
     private bool hasGator = false;
@@ -49,6 +50,7 @@ public class PlayerManager : MonoBehaviour
         defaultLeg2Sprite.enabled = false;
         defaultGatorSprite.enabled = false;
         shotgunSprite.enabled = false;
+        barSprite.SetActive(false);
         ragdoll.SetActive(true);
     }
 
