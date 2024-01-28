@@ -6,7 +6,11 @@ using UnityEngine.InputSystem;
 public class LookAtMouse : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer shotgunRenderer;
-    [SerializeField] private SpriteRenderer grandmaRenderer;
+    [SerializeField] private SpriteRenderer grandmaTorsoRenderer;
+    [SerializeField] private SpriteRenderer grandmaHeadRenderer;
+    [SerializeField] private SpriteRenderer grandmaGatorRenderer;
+    [SerializeField] private SpriteRenderer grandmaLeg1Renderer;
+    [SerializeField] private SpriteRenderer grandmaLeg2Renderer;
     private bool activationState = true;
 
     private void Update()
@@ -21,12 +25,20 @@ public class LookAtMouse : MonoBehaviour
             if(direction.x >= 0  && shotgunRenderer.flipX == true)
             {
                 shotgunRenderer.flipX = false;
-                grandmaRenderer.flipX = false;
+                grandmaTorsoRenderer.flipX = false;
+                grandmaHeadRenderer.flipX = false;
+                grandmaGatorRenderer.flipX = false;
+                grandmaLeg1Renderer.flipX = false;
+                grandmaLeg2Renderer.flipX = false;
             }
             if(direction.x <= 0 && shotgunRenderer.flipX == false)
             {
                 shotgunRenderer.flipX = true;
-                grandmaRenderer.flipX = true;
+                grandmaTorsoRenderer.flipX = true;
+                grandmaHeadRenderer.flipX = true;
+                grandmaGatorRenderer.flipX = true;
+                grandmaLeg1Renderer.flipX = true;
+                grandmaLeg2Renderer.flipX = true;
             }
 
             transform.up = direction;
