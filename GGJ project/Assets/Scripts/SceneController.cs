@@ -16,8 +16,8 @@ public class SceneController : MonoBehaviour
     [SerializeField] private PlayerInputs playerInputs;
     [SerializeField] private UnityEvent pauseEvent;
     [SerializeField] private UnityEvent unpauseEvent;
-    private bool ispaused = false;
-    private bool isMainMenu = true;
+    [SerializeField] private bool ispaused = false;
+    [SerializeField] private bool isMainMenu = false;
 
     private void Awake()
     {
@@ -34,7 +34,7 @@ public class SceneController : MonoBehaviour
         playerInputs = new PlayerInputs();
         gm = Object.FindObjectOfType<GameManager>();
         gm.deathCountTxt = deathCountTxt;
-        ispaused = true;
+        ispaused = false;
     }
 
     private void Update()

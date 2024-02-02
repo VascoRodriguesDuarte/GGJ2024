@@ -797,6 +797,8 @@ MonoBehaviour:
   unpauseEvent:
     m_PersistentCalls:
       m_Calls: []
+  ispaused: 0
+  isMainMenu: 0
 --- !u!114 &541238032
 MonoBehaviour:
   m_ObjectHideFlags: 0
